@@ -4,7 +4,6 @@ require 'opal-jquery'
 require 'opal-slim'
 require 'clearwater/application'
 
-require_tree './views'
 require 'models/article'
 require 'models/product_category'
 require 'models/user'
@@ -18,6 +17,17 @@ require 'controllers/articles_new_controller'
 require 'controllers/about_controller'
 require 'controllers/categories_controller'
 require 'controllers/store_controller'
+
+require 'views/about_view'
+require 'views/application_index_view'
+require 'views/application_view'
+require 'views/article_view'
+require 'views/articles_index_view'
+require 'views/articles_new_view'
+require 'views/articles_view'
+require 'views/categories_view'
+require 'views/session_view'
+require 'views/store_view'
 
 router = Clearwater::Router.new do
   route 'articles' => ArticlesController.new do
