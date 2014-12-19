@@ -14,6 +14,11 @@ gem 'opal-rails', '~> 0.7.0.beta1'
 gem 'opal-rspec', github: 'opal/opal-rspec'
 gem 'opal-slim', github: 'jgaskins/opal-slim'
 
+# gem "representable"
+#gem "reform", "1.2.4" #, git: "https://github.com/apotonick/reform.git"
+gem "trailblazer", git: "https://github.com/apotonick/trailblazer.git"
+gem "cells", git: "https://github.com/apotonick/cells"
+
 group :production do
   gem 'rails_12factor'
 end
