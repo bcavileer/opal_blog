@@ -9,14 +9,6 @@ require 'models/article'
 require 'models/product_category'
 require 'models/user'
 
-def benchmark message
-  start = Time.now
-  result = yield
-  finish = Time.now
-  puts "#{message} in #{(finish - start) * 1000}ms"
-  result
-end
-
 require 'controllers/application_index_controller'
 require 'controllers/application_controller'
 require 'controllers/articles_index_controller'
@@ -44,4 +36,12 @@ OpalBlog = Clearwater::Application.new(router: router)
 
 Document.ready? do
   OpalBlog.call
+end
+
+def benchmark message
+  start = Time.now
+  result = yield
+  finish = Time.now
+  puts "#{message} in #{(finish - start) * 1000}ms"
+  result
 end
