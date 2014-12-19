@@ -5,7 +5,9 @@ require 'opal-slim'
 require 'clearwater/application'
 
 require_tree './views'
-require_tree './models'
+require 'models/article'
+require 'models/product_category'
+require 'models/user'
 require_tree './controllers'
 
 def benchmark message
