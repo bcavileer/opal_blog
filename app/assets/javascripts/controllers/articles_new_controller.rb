@@ -1,7 +1,7 @@
 class ArticlesNewController < Clearwater::Controller
   attr_accessor :article
 
-  view { ArticlesNewView.new(model: @article = Articles::Model.new) }
+  view { Articles::Views::New.new(model: @article = Articles::Model.new) }
 
   def create_article attributes
     HTTP.post(
