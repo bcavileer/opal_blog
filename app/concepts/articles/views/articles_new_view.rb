@@ -10,7 +10,7 @@ class ArticlesNewView < Clearwater::FormView
 
     event :click, '#post-article' do |e|
       create_article article_attributes
-      controller.article = @model = Article.new
+      controller.article = @model = Articles::Model.new
     end
 
     event :keyup, '.attribute' do |e|
