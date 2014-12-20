@@ -1,3 +1,3 @@
 class ArticlesIndexController < Clearwater::Controller
-  view { ArticlesIndexView.new }
+  view { Articles::Views::Index.new }
 end
