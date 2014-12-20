@@ -25,7 +25,7 @@ class ArticlesController < Clearwater::Controller
 
     HTTP.get('/api/v1/articles') do |response|
       @sorted_articles = response.json.map { |attributes|
-        Article.new(attributes)
+        Articles::Model.new(attributes)
       }
       @articles = Hash[sorted_articles.map { |a| [a.id, a] }]
 

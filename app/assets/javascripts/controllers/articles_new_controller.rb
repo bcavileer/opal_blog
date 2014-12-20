@@ -1,7 +1,7 @@
 class ArticlesNewController < Clearwater::Controller
   attr_accessor :article
 
-  view { ArticlesNewView.new(model: @article = Article.new) }
+  view { ArticlesNewView.new(model: @article = Articles::Model.new) }
 
   def create_article attributes
     HTTP.post(
@@ -10,7 +10,7 @@ class ArticlesNewController < Clearwater::Controller
         beforeSend: set_csrf_token
     ) do |response|
       # parent.fetch_articles
-      article = Article.new(response.json)
+      article = Articles::Model.new(response.json)
       parent.add_article article
       router.navigate_to "/articles/#{article.id}"
     end

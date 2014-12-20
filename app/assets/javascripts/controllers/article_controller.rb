@@ -1,5 +1,5 @@
 class ArticleController < Clearwater::Controller
-  view { ArticleView.new }
+  view { Articles::Views::Detail.new }
 
   def signed_in?
     parent.parent.signed_in?
