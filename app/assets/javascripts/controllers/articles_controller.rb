@@ -1,5 +1,5 @@
 class ArticlesController < Clearwater::Controller
-  view { ArticlesView.new }
+  view { Articles::Views::Master.new }
   default_outlet { ArticlesIndexController.new }
 
   def loading_articles?
